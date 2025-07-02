@@ -61,4 +61,6 @@ function M.setup(opts)
 	})
 end
 
+M.setup() -- 🪄 Automatically call setup() with defaults on load
+
 return M
