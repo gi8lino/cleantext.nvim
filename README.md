@@ -6,9 +6,9 @@ Removes smart quotes, em dashes, and other “weird” characters before saving 
 
 ```lua
 {
-  "gi8lino/nvim-cleantext",
+  "gi8lino/cleantext.nvim",
   config = function()
-    require("cleantext").setup({
+    require("cleantext.nvim").setup({
       replacements = {
         ["—"] = "-",
         ["ß"] = "ss",
@@ -16,7 +16,7 @@ Removes smart quotes, em dashes, and other “weird” characters before saving 
     })
 
     vim.keymap.set("n", "<leader>ct", function()
-      require("cleantext").toggle()
+      require("cleantext.nvim").toggle()
     end, { desc = "Toggle CleanText", silent = true })
   end,
 ```
